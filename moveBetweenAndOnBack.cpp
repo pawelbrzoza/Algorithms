@@ -31,7 +31,7 @@ void show(node *&head)
 	cout<<"NULL"<<endl;
 }
 
-void funkcja(node *&head, int x, int y)
+void moveBetweenAndOnBack(node *&head, int x, int y)
 {
 	node *p=head;
 	
@@ -61,7 +61,6 @@ void funkcja(node *&head, int x, int y)
 	while(p1->next!=NULL)
 		p1=p1->next;
 
-
 	for(int a=0; a<i; a++)
 	{
 		node *p2=new node;
@@ -69,10 +68,7 @@ void funkcja(node *&head, int x, int y)
 		p2->val=tab[a];
 		p2->next=NULL;
 		p1=p2;
-		
 	}
-
-
 }
 
 int main()
@@ -90,9 +86,8 @@ int main()
 	push(head, 5);
 	
 	show(head);
-	funkcja(head, 5, 4);
+	moveBetweenAndOnBack(head, 5, 4);
 	show(head);
-	//show2(head, head2);
 
 	system("pause");
 }
