@@ -6,6 +6,7 @@ struct Node
 	int val;
 	Node *next;
 };
+
 void push(Node *&head, int x)
 {
 	Node *p = new Node;
@@ -23,7 +24,6 @@ void pop(Node *&head)
 		delete p;
 	}
 }
-
 
 void show(Node *&head)
 {
@@ -64,9 +64,7 @@ int main()
 {
 	Node *head=NULL;
 	
-
 	show(head);
-
 	zamien(head, 2, 7);
 	show(head);
 
