@@ -1,6 +1,6 @@
 #include<iostream>
 #include<time.h>
-#include<windows.h>
+
 using namespace std;
 
 struct node
@@ -8,7 +8,6 @@ struct node
 	int val;
 	node *next;
 }; 
-
 
 void enqueue(node *&head, node *&tail, int x)
 {
@@ -23,6 +22,7 @@ void enqueue(node *&head, node *&tail, int x)
 	tail=p;
 
 }
+
 void show(node *&head)
 {
 	node *p=head;
@@ -39,7 +39,7 @@ void show(node *&head)
 	cout<<"NULL"<<endl;
 }
 
-void kopiuj(node *&head)
+void duplicate(node *&head)
 {
 	node *p=head;
 	while(p)
@@ -61,22 +61,23 @@ void kopiuj(node *&head)
 int main()
 {
 	srand((unsigned)time(NULL));
+	
 	node *head=NULL;
 	node *tail=NULL;
+	
 	int x,y;
+	
 	cout<<"Podaj liczbe elementow: ";
 	cin>>x;
+	
 	for(int i=0;i<x;i++)
 	{
 		y=rand()%(20-10)+10;
 		enqueue(head, tail, y);	
-		Sleep(3);
 	}
 	
 	show(head);
-
-	kopiuj(head);
-	
+	duplicate(head);
 	show(head);
 
 	system("pause");
