@@ -19,7 +19,6 @@ void enqueue(node *&head, node*&tail, int x)
 		head=p;
 	tail=p;
 	
-
 }
 
 
@@ -37,11 +36,9 @@ void show(node *&head)
 	}
 
 	cout<<"NULL"<<endl;
-
-
 }
 
-void ostzpierw(node *&head, node *&tail)
+void changeLastWithFirst(node *&head, node *&tail)
 {
 	node *p=head;
 	
@@ -70,14 +67,12 @@ int main()
 	
 	show(head);
 
-	ostzpierw(head, tail);
+	changeLastWithFirst(head, tail);
 
 	enqueue(head,tail,9);
 	enqueue(head,tail,9);
 
 	show(head);
-
-
 
 	system("pause");
 }
