@@ -13,7 +13,6 @@ void push(node *&head, int x)
 	p->val=x;
 	p->next=head;
 	head=p;
-
 }
 
 void show(node *&head)
@@ -34,7 +33,7 @@ void show(node *&head)
 
 }
 
-void mov(node *&head, int x)
+void findElementOfValueAndMoveOnBack(node *&head, int x)
 {
 	node *p=head;
 
@@ -72,26 +71,22 @@ void mov(node *&head, int x)
 				p->next=NULL;
 				p1->next=p;
 			}
-
 		}
 	}
-
 }
-
 
 int main()
 {
 	node *head=NULL;
 
-	/*
 	push(head, 5);
 	push(head, 2);
 	push(head, 4);
-	push(head, 3);*/
+	push(head, 3);
 	push(head, 1);
 
 	show(head);
-	mov(head, 1);
+	findElementOfValueAndMoveOnBack(head, 4);
 	show(head);
 
 	system("pause");
