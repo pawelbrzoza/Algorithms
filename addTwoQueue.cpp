@@ -7,7 +7,6 @@ struct node
 	node *next;
 }; 
 
-
 void enqueue(node *&head, node *&tail, int x)
 {
 	node *p=new node;
@@ -38,22 +37,21 @@ void show(node *&head)
 	cout<<"NULL"<<endl;
 }
 
-void dodaj(node *&tail, node *&head2)
+void add(node *&tail, node *&head2)
 {
 	if(tail && head2)
 		tail->next=head2;
-
 }
 void dequeue(node *&head, node *&tail)
 {
-  if(head)
-  {
-    node *p = head;
-    head = head->next;
-	if(head==0)
-		tail=NULL;
-	delete p;
-  }  
+  	if(head)
+	{
+    		node *p = head;
+    		head = head->next;
+		if(head==0)
+			tail=NULL;
+		delete p;
+  	}
 } 
 
 int main()
@@ -62,7 +60,6 @@ int main()
 	node *tail=NULL;
 	node *head2=NULL;
 	node *tail2=NULL;
-	
 	
 	enqueue(head, tail, 4);
 	enqueue(head, tail, 1);
@@ -76,13 +73,10 @@ int main()
 	
 	show(head);
 	show(head2);
-
-	dodaj(tail,head2);
+	add(tail,head2);
 	show(head);
-	
 	dequeue(head, tail);
 	show(head);
 	
-
 	system("pause");
 }
