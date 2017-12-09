@@ -13,9 +13,7 @@ void push(node *&head, int x)
 	p->val=x;
 	p->next=head;
 	head=p;
-
 }
-
 
 void show(node *&head)
 {
@@ -32,7 +30,8 @@ void show(node *&head)
 
 	cout<<"NULL"<<endl;
 }
-void odwroc(node *&head)
+
+void revertStack(node *&head)
 {
 	node *p=head;
 	node *p1;
@@ -43,7 +42,6 @@ void odwroc(node *&head)
 		p->next=p1->next;
 		p1->next=head;
 		head=p1;
-		
 	}
 }
 
@@ -51,16 +49,14 @@ int main()
 {
 	node *head=NULL;
 
-	
 	push(head, 4);
 	push(head, 3);
 	push(head, 2);
 	push(head, 1);
 	push(head, 0);
 
-
 	show(head);
-	odwroc(head);
+	revertStack(head);
 	show(head);
 
 	system("pause");
