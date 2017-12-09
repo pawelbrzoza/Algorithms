@@ -15,7 +15,6 @@ void push(node *&head, int x)
 
 	if(p)
 	{
-		
 		node *n=new node;
 		n->val=x;
 		n->next=head;
@@ -43,7 +42,6 @@ void push(node *&head, int x)
 				p1=p1->next;
 				p2=p2->next;
 			}
-
 		}
 	}
 	else
@@ -54,7 +52,6 @@ void push(node *&head, int x)
 		head=p;
 	}
 }
-
 
 void show(node *&head)
 {
@@ -72,12 +69,10 @@ void show(node *&head)
 	cout<<"NULL"<<endl;
 }
 
-
 int main()
 {
 	node *head=NULL;
 
-	
 	push(head, 4);
 	push(head, 1);
 	push(head, 5);
@@ -97,10 +92,7 @@ int main()
 	push(head, 6);
 	push(head, 3);
 
-	
-	
 	show(head);
 	
-
 	system("pause");
 }
