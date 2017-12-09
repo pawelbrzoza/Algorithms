@@ -14,6 +14,7 @@ void push(node *&head, int x)
 	p->next=head;
 	head=p;
 }
+
 void pop(node *&head)
 {
 	node *p=head;
@@ -23,8 +24,6 @@ void pop(node *&head)
 		delete p;
 	}
 }
-
-
 
 void show(node *&head)
 {
@@ -42,7 +41,7 @@ void show(node *&head)
 	cout<<"NULL"<<endl;
 }
 
-void dodaj(node *&head, node *&head2)
+void add(node *&head, node *&head2)
 {
 	node *p=head;
 
@@ -52,8 +51,6 @@ void dodaj(node *&head, node *&head2)
 			p=p->next;
 		p->next=head2;
 	}
-	
-
 }
 
 int main()
@@ -71,7 +68,6 @@ int main()
 	push(head2, 0);
 	push(head2, 8);	
 
-	
 	show(head);
 	show(head2);
 
@@ -81,6 +77,5 @@ int main()
 	pop(head);
 	show(head);
 	
-
 	system("pause");
 }
