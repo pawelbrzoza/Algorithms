@@ -13,7 +13,6 @@ void push(node *&head, int x)
 	p->val=x;
 	p->next=head;
 	head=p;
-
 }
 
 void show(node *&head)
@@ -30,13 +29,10 @@ void show(node *&head)
 	}
 
 	cout<<"NULL"<<endl;
-
-
 }
 
-void del_parzyste(node *&head)
+void deleteEvenElements(node *&head)
 {
-
 	if(head->val%2!=0)
 	{
 		node *p=head;
@@ -56,7 +52,6 @@ void del_parzyste(node *&head)
 				p1=p1->next;
 				p=p->next;
 			}
-
 		}
 	}
 	else
@@ -86,12 +81,9 @@ void del_parzyste(node *&head)
 				p1=p1->next;
 				p=p->next;
 			}
-
 		}
 	}
-
 }
-
 
 int main()
 {
@@ -107,7 +99,7 @@ int main()
 	push(head, 1);
 
 	show(head);
-	del_parzyste(head);
+	deleteEvenElements(head);
 	show(head);
 
 	system("pause");
