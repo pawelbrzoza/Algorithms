@@ -41,7 +41,7 @@ void show(Node *&head)
 }
 
 
-void zamien(Node *&head, int x, int y)
+void change(Node *&head, int x, int y)
 {
 	Node *p=head;
 	if(head)
@@ -65,7 +65,7 @@ int main()
 	Node *head=NULL;
 	
 	show(head);
-	zamien(head, 2, 7);
+	change(head, 2, 7);
 	show(head);
 
 	system("pause");
