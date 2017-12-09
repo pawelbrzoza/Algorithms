@@ -7,7 +7,6 @@ struct node
 	node *next;
 }; 
 
-
 void enqueue(node *&head, node *&tail, int x)
 {
 	node *p=new node;
@@ -19,17 +18,17 @@ void enqueue(node *&head, node *&tail, int x)
 	else
 		head=p;
 	tail=p;
-
 }
+
 void dequeue(node *&head3, node *&tail3)
 {
-  if(head3)
-  {
-    node *p = head3;
-    head3 = head3->next;
-    if(!head3) tail3 = NULL;
-    delete p;
-  }  
+  	if(head3)
+  	{
+   		node *p = head3;
+    		head3 = head3->next;
+    		if(!head3) tail3 = NULL;
+    		delete p;
+  	}  
 } 
 
 void show(node *&head)
@@ -48,11 +47,10 @@ void show(node *&head)
 	cout<<"NULL"<<endl;
 }
 
-void zamien(node *&head, int x)
+void changeElementOfValueWithNext(node *&head, int x)
 {
 	node *p=head;
 	
-
 	while(p->next->val!=x)
 	{
 		p=p->next;	
@@ -64,16 +62,12 @@ void zamien(node *&head, int x)
 	p->next=p2;
 	p1->next=p2->next;
 	p2->next=p1;	
-	
-
 }
-
 
 int main()
 {
 	node *head=NULL;
 	node *tail=NULL;
-	
 	
 	enqueue(head, tail, 4);
 	enqueue(head, tail, 1);
@@ -81,12 +75,9 @@ int main()
 	enqueue(head, tail, 1);
 	enqueue(head, tail, 10);
 
-	
 	show(head);
-
-	zamien(head, 2);
+	changeElementOfValueWithNext(head, 2);
 	show(head);
 	
-
 	system("pause");
 }
