@@ -14,6 +14,7 @@ void push(node *&head, int x)
 	p->next=head;
 	head=p;
 }
+
 void pop(node *&head)
 {
 	node *p=head;
@@ -21,11 +22,8 @@ void pop(node *&head)
 	{
 		head=p->next;
 		delete p;
-
 	}
 }
-
-
 
 void show(node *&head)
 {
@@ -43,11 +41,12 @@ void show(node *&head)
 	cout<<"NULL"<<endl;
 }
 
-void sort(node *&head)
+void bubbleSort(node *&head)
 {
 	node *p=head;
 	int i=1;
 	int bufor;
+	
 	while(p->next)
 	{
 		i++;
@@ -69,16 +68,13 @@ void sort(node *&head)
 			p1=p1->next;
 			p2=p2->next;
 		}
-
 	}
-
 }
 
 int main()
 {
 	node *head=NULL;
 
-	
 	push(head, 4);
 	push(head, 1);
 	push(head, 5);
@@ -97,15 +93,10 @@ int main()
 	push(head, 9);
 	push(head, 6);
 	push(head, 3);
-
-	
 	
 	show(head);
-
-	sort(head);
-
+	bubbleSort(head);
 	show(head);
 	
-
 	system("pause");
 }
